@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 75vh;
+  background : rgb(229,217,182);
+  background: radial-gradient(circle, rgba(229,217,182,1) 0%, rgba(164,190,123,1) 53%, rgba(95,141,78,1) 100%);
+  background-size: cover;
+}
+
+/* Kasatno jay wrapper white na */
+.slider-wrapper {
+  overflow: hidden;
+  max-width: 1500px;
+  margin: 0 70px 250px;
+}
+
+/* Yung design ng ited card */
+.card-list .card-item {
+  height: auto;
+  color: #fff;
+  user-select: none;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  backdrop-filter: blur(30px);
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Ajay kasatno jay image inside card */
+.card-list .card-item .location-image {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 40px;
+  border: 3px solid #285430;
+  padding: 4px;
+} 
+
+/* Ajay letter */
+.card-list .card-item .user-profession {
+  font-size: 1.15rem;
+  color: #e3e3e3;
+  font-weight: 500;
+  margin: 14px 0 40px;
+}
+
+/* Locate button */
+.card-list .card-item .message-button {
+  font-size: 1.25rem;
+  padding: 10px 35px;
+  color: #D2E3C8;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  background: #285430;
+  border: 1px solid transparent;
+  transition: 0.2s ease;
+}
+
+/* Locate button pindot */
+.card-list .card-item .message-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* Bilog bilog jay baba */
+.slider-wrapper .swiper-pagination-bullet {
+  background: #fff;
+  height: 20px;
+  width: 20px;
+  opacity: 0.5;
+}
+
+.slider-wrapper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.slider-wrapper .swiper-slide-button {
+  color: #4F6F52;
+  margin-top: 1px;
+  transition: 0.9s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+  color: #035420;
+}
+
+/* Icons sa taas diko alam bat nandito to */
+.icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.icon i {
+  font-size: 30px;
+  color: #285430;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon i:hover {
+  color: #a9bfad;
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    margin: 0 15px 30px;
+    width: auto;
+    overflow-x: auto;
+  }
+}
+
+/* da search box */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+html, body {
+  font-family: Raleway, sans-serif;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.search-box {
+  font-size: 20px;
+  border: solid 0.3em #000000;
+  display: inline-block;
+  position: relative;
+  border-radius: 2.5em;
+}
+.search-box input[type=text] {
+  font-family: inherit;
+  font-weight: bold;
+  width: 2.5em;
+  height: 2.5em;
+  padding: 0.3em 2.1em 0.3em 0.4em;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 2.5em;
+  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 150ms;
+}
+.search-box input[type=text]:focus {
+  outline: none;
+}
+.search-box input[type=text]:focus, .search-box input[type=text]:not(:placeholder-shown) {
+  width: 18em;
+  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.search-box input[type=text]:focus + button[type=reset], .search-box input[type=text]:not(:placeholder-shown) + button[type=reset] {
+  transform: rotate(-45deg) translateY(0);
+  transition: transform 150ms ease-out 800ms;
+}
+.search-box input[type=text]:focus + button[type=reset]:after, .search-box input[type=text]:not(:placeholder-shown) + button[type=reset]:after {
+  opacity: 1;
+  transition: top 150ms ease-out 950ms, right 150ms ease-out 950ms, opacity 150ms ease 950ms;
+}
+.search-box button[type=reset] {
+  background-color: transparent;
+  width: 1.4em;
+  color:#285430;
+  height: 1.4em;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0.55em;
+  right: 0.55em;
+  transform: rotate(-45deg) translateY(2.2em);
+  transition: transform 150ms ease-out 150ms;
+}
+.search-box button[type=reset]:before, .search-box button[type=reset]:after {
+  content: "";
+
+  background-color: #285430;
+  width: 0.3em;
+  height: 1.4em;
+  position: absolute;
+}
+.search-box button[type=reset]:after {
+  transform: rotate(90deg);
+  opacity: 0;
+  transition: transform 150ms ease-out, opacity 150ms ease-out;
+}
